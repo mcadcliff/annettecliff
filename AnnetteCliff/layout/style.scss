@@ -132,13 +132,18 @@ img {
   }
   img,
   svg {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-  margin: auto;
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    margin: auto;
   }
   @media screen and (min-width:1024px) {
     min-height: 100vh;
+    img,
+    svg {
+      width: 200px;
+      height: 200px;
+    }
   }
 }
 
@@ -172,6 +177,9 @@ img {
     line-height: 25px;
     text-align: left;
     margin: 10px auto !important;
+  }
+  a {
+    font-size: 14px;
   }
   h1 {
     text-align:center;
@@ -221,6 +229,8 @@ nav {
 footer {
   padding: 20px;
   font-size: 10px;
+  position: fixed;
+  bottom: 0;
 }
 
 
@@ -294,7 +304,6 @@ footer {
 .slideshow {
   display: flex;
   padding: 50px;
-  margin: 50px 0;
   img {
     max-width: 80%;
     height: 100%;
@@ -314,7 +323,7 @@ footer {
 
 .Slick {
   justify-content: center;
-  padding: 0;
+  padding: 50px 0 50px 0;
 }
 
 .slick-track {
@@ -324,6 +333,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .slick-current.slick-active {
@@ -352,15 +362,21 @@ footer {
 
 .slick-dots {
   position: fixed;
-  top: 90vh;
+  bottom: 0;
   right: 0;
   display: flex;
   button {
     display: none !important;
   }
+  &:hover {
+    cursor: pointer;
+  }
   li {
     margin: 0 10px;
     &.slick-active {
+      &:hover {
+        cursor: initial !important;
+      }
       &::marker {
         color: $dark !important;
       }

@@ -153,8 +153,8 @@ img {
 
 .section img,
 .section svg {
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   -o-object-fit: contain;
      object-fit: contain;
   margin: auto;
@@ -163,6 +163,11 @@ img {
 @media screen and (min-width: 1024px) {
   .section {
     min-height: 100vh;
+  }
+  .section img,
+  .section svg {
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -202,6 +207,10 @@ img {
   line-height: 25px;
   text-align: left;
   margin: 10px auto !important;
+}
+
+.section-header a {
+  font-size: 14px;
 }
 
 .section-header h1 {
@@ -265,6 +274,8 @@ nav img {
 footer {
   padding: 20px;
   font-size: 10px;
+  position: fixed;
+  bottom: 0;
 }
 
 #home .last {
@@ -347,7 +358,6 @@ footer {
   display: -ms-flexbox;
   display: flex;
   padding: 50px;
-  margin: 50px 0;
 }
 
 .slideshow img {
@@ -372,7 +382,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0;
+  padding: 50px 0 50px 0;
 }
 
 .slick-track {
@@ -389,6 +399,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 
 .slick-current.slick-active {
@@ -420,7 +431,7 @@ footer {
 
 .slick-dots {
   position: fixed;
-  top: 90vh;
+  bottom: 0;
   right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -431,8 +442,16 @@ footer {
   display: none !important;
 }
 
+.slick-dots:hover {
+  cursor: pointer;
+}
+
 .slick-dots li {
   margin: 0 10px;
+}
+
+.slick-dots li.slick-active:hover {
+  cursor: initial !important;
 }
 
 .slick-dots li.slick-active::marker {
