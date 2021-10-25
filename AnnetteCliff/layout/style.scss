@@ -1,0 +1,373 @@
+
+// ------ standard ----- //
+html {
+  height: 100vh;
+  body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+
+// ------ typography ----- //
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-weight: 800;
+  font-size: 15vw;
+  font-family: 'Roboto Mono', 'sans-serif';
+}
+
+p {
+  font-family: 'Roboto Mono', 'sans-serif';
+  font-weight: 300;
+}
+
+u {
+  text-decoration: none;
+  border-bottom: 1px solid $light;
+  font-style: italic;
+}
+
+.title-sm {
+  font-size: 50px;
+}
+
+// ------ colors ----- //
+// $dark: #2A2423;
+$dark: #211E1D;
+$semi-dark: #B2B2B2;
+$semi-light: #E5E4E4;
+$light: #dddddd;
+
+
+// ------ shared ----- //
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.rounded-image img {
+  border-radius: 100%;
+}
+
+.cursor {
+  pointer-events: none;
+  
+  &__ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    mix-blend-mode: difference;
+    z-index: 1000;
+    
+    circle {
+      fill: #f7f8fa;
+    }
+  }      
+} 
+
+.text-center {
+  text-align: center;
+}
+
+.wrapper {
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  &.two-col {
+    grid-template-columns: repeat(2,1fr);
+  }
+  &.three-col {
+    grid-template-columns: repeat(3,1fr);
+  }
+  &.four-col {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+
+.flex {
+  display: flex;
+  &.flex-col {
+    flex-direction: column;
+  }
+  @media screen and (max-width:1024px) {
+    &.sm\:flex-col {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .lg\:half {
+    width: 50%;
+  }
+  .lg\:grid {
+    display: grid;
+    &.three-col {
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+}
+
+.section {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  figure {
+    text-align: center;
+  }
+  img {
+    filter: invert(1);
+  }
+  img,
+  svg {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin: auto;
+  }
+  @media screen and (min-width:1024px) {
+    min-height: 100vh;
+  }
+}
+
+.intro {
+  min-height: 50vh;
+  @media screen and (min-width:1024px) {
+    min-height: 100vh;
+  }
+}
+
+.cta {
+    color: $dark !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 2px solid $dark;
+    font-weight: 600;
+}
+
+.section-header {
+  text-align: center;
+  margin: auto;
+  background: $semi-light;
+  color: $dark;
+  padding: 0 0 50px 0;
+  p,
+  a {
+    max-width: 90%;
+  }
+  p {
+    font-size: 13px;
+    line-height: 25px;
+    text-align: left;
+    margin: 10px auto !important;
+  }
+  h1 {
+    text-align:center;
+    font-family: 'Open Sans', 'sans-serif';
+  }
+  @media screen and (min-width:1024px) {
+    p,
+    h1,
+    a {
+      max-width: 620px;
+      margin: auto;
+    }
+    p {
+      font-size: 12px;
+      line-height: 24px;
+    }
+  }
+}
+
+// ------ header and footer ----- //
+nav {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  flex-direction: row;
+  img {
+    margin-right: 10px;
+    width: 20px !important;
+    height: 20px !important;
+    filter: invert(0) !important;
+  }
+  @media screen and (min-width:1024px) {
+    flex-direction: column;
+    img {
+      margin-bottom: 10px;
+      margin-right: 0;
+    }
+  }
+}
+
+.return img {
+  width: 25px !important;
+  transform: rotate(180deg);
+}
+
+footer {
+  padding: 20px;
+  font-size: 10px;
+}
+
+
+// ------ home and portfolio page ----- //
+#home {
+  .last {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    img {
+      max-width: 70%;
+      margin: auto;
+    }
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width:1024px) {
+    .cta {
+      margin-left: 20px;
+    }
+    .intro img,
+    .intro svg {
+      margin-left: auto !important;
+      margin-right: 0 !important;
+    }
+  }
+}
+
+.name-content {
+  padding: 20px;
+}
+
+#disclosure {
+  background: $dark;
+  color: $light;
+  padding: 20vh 0;
+  h3 {
+    margin: 0;
+    font-style: italic;
+    font-size: 3vw;
+    margin-bottom: 30px !important;
+  }
+  h3,
+  p {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 30px;
+  }
+  @media screen and (min-width:1024px) {
+    padding: 20vh;
+    h3 {
+      font-size: 2vw;
+    }
+    h3,
+    p {
+      width: 65%;
+    }
+  }
+}
+
+#portfolio header {
+  background: $semi-light;
+  padding: 20px 20px 0 20px;
+}
+
+
+
+// ------ slick slider styles ----- //
+.slideshow {
+  display: flex;
+  padding: 50px;
+  margin: 50px 0;
+  img {
+    max-width: 80%;
+    height: 100%;
+    object-fit: contain;
+  }
+  @media screen and (min-width:1024px) {
+    img {
+      max-width: 50%;
+      max-height: 500px;
+    }
+  }
+}
+
+.slide:hover {
+  opacity: 0.5;
+}
+
+.Slick {
+  justify-content: center;
+  padding: 0;
+}
+
+.slick-track {
+  transform: initial !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-current.slick-active {
+  filter: grayscale(0);
+  opacity: 1;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.slick-slide {
+  width: 100% !important;
+  filter: grayscale(1);
+  opacity: 0.3;
+  border: 1px solid $light;
+  &:not(.slick-active) {
+    width: 0 !important;
+    height: 0;
+    filter: grayscale(1);
+  }
+}
+
+
+.slick-arrow {
+  display: none !important;
+}
+
+.slick-dots {
+  position: fixed;
+  top: 90vh;
+  right: 0;
+  display: flex;
+  button {
+    display: none !important;
+  }
+  li {
+    margin: 0 10px;
+    &.slick-active {
+      &::marker {
+        color: $dark !important;
+      }
+    }
+    &::marker {
+      color: $semi-light !important;
+    }
+  }
+}

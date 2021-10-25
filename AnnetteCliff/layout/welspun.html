@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+  <head>
+    <title>Annette Cliff: Web Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../icons/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon2.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&family=Press+Start+2P&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script>
+</head>
+
+  <body id="portfolio">
+    <header>
+      <span class="return">
+        <a href="index.html" class="hoverable">
+          <img src="../icons/return.png" alt="Return to homepage">
+        </a>
+      </span>
+      <nav>
+        <a class="hoverable" href="mailto:annettecliff@gmail.com"><img src="../icons/email.png"></a>
+        <a class="hoverable" href="tel:331-454-4440"><img src="../icons/phone.png"></a>
+        <a class="hoverable" href="https://www.linkedin.com/in/annette-cliff/" target="_blank"><img src="../icons/linkedin.png" alt="LinkedIn"></a>
+        <a class="hoverable" href="https://github.com/annette-cliff" target="_blank"><img src="../icons/github.png" alt="GitHub"></a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+        <div class="section-header">
+            <h1 class="title-sm">Welspun</h1>
+              <p>Shopify is the content management system used for the entirety of the site (languages used include: Liquid, SCSS, jQuery).</p>
+              <p>My contribution includes: metafield creation, backend section and theme setting creation, frontend markup, styles and functionality for the site. Key feature for this site is the Learn page functionality to switch out content based on click events.</p>
+            <a href="https://welspunusa.com/" target="_blank" class="cta hoverable">See the site</a>
+        </div>
+        <div class="slideshow Slick">
+          <img src="../assets/welspun/home-1.png" alt="Welspun Homepage">
+          <img src="../assets/welspun/home-2.png" alt="Welspun Homepage">
+          <img src="../assets/welspun/home-3.png" alt="Welspun Learn">
+          <img src="../assets/welspun/home-4.png" alt="WelLivingHome&trade; Blog">
+        </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2021 annette cliff</p>
+    </footer>
+
+    <div class="cursor">
+      <div class="cursor__ball cursor__ball--big ">
+        <svg height="30" width="30">
+          <circle cx="15" cy="15" r="12" stroke-width="0"></circle>
+        </svg>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+        const $bigBall = document.querySelector('.cursor__ball--big');
+        const $hoverables = document.querySelectorAll('.hoverable');
+
+        document.body.addEventListener('mousemove', onMouseMove);
+        for (let i = 0; i < $hoverables.length; i++) {
+          $hoverables[i].addEventListener('mouseenter', onMouseHover);
+          $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+        }
+
+        function onMouseMove(e) {
+          TweenMax.to($bigBall, .1, {
+            x: e.pageX - 10,
+            y: e.pageY - 10
+          })
+        }
+
+        function onMouseHover() {
+          TweenMax.to($bigBall, .3, {
+            scale: 4
+          })
+        }
+        function onMouseHoverOut() {
+          TweenMax.to($bigBall, .3, {
+            scale: 1
+          })
+        }
+
+          
+        $(document).ready(function(){
+          $('.Slick').slick({
+            slidesToScroll: 1,
+              slidesToShow: 3,
+              centerMode: true,
+              dots: true
+          });
+        });
+      </script>
+  </body>
+</html>
