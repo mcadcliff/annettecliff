@@ -20,7 +20,20 @@ h1,
 h2 {
   font-weight: 800;
   font-size: 15vw;
-  font-family: 'Roboto Mono', 'sans-serif';
+}
+
+p {
+  font-weight: 300;
+}
+
+u {
+  text-decoration: none;
+  border-bottom: 1px solid #dddddd;
+  font-style: italic;
+}
+
+.title-sm {
+  font-size: 50px;
 }
 
 img {
@@ -163,57 +176,12 @@ img {
   }
 }
 
-.title-sm {
-  font-size: 50px;
-}
-
 .cta {
   color: #211E1D !important;
   text-decoration: none;
   text-transform: uppercase;
   border-bottom: 2px solid #211E1D;
   font-weight: 600;
-}
-
-.slideshow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 50px;
-  margin: 50px 0;
-}
-
-.slideshow img {
-  max-width: 80%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-@media screen and (min-width: 1024px) {
-  .slideshow img {
-    max-width: 50%;
-    max-height: 500px;
-  }
-}
-
-.slide:hover {
-  opacity: 0.5;
-}
-
-.name-content {
-  padding: 20px;
-}
-
-u {
-  text-decoration: none;
-  border-bottom: 1px solid #dddddd;
-  font-style: italic;
-}
-
-p {
-  font-family: 'Roboto Mono', 'sans-serif';
-  font-weight: 300;
 }
 
 .section-header {
@@ -294,6 +262,11 @@ nav img {
           transform: rotate(180deg);
 }
 
+footer {
+  padding: 20px;
+  font-size: 10px;
+}
+
 #home .last {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -324,6 +297,10 @@ nav img {
     margin-left: auto !important;
     margin-right: 0 !important;
   }
+}
+
+.name-content {
+  padding: 20px;
 }
 
 #disclosure {
@@ -360,18 +337,35 @@ nav img {
   }
 }
 
-footer {
-  padding: 20px;
-  font-size: 10px;
-}
-
-#main-content {
-  overflow-x: hidden;
-}
-
 #portfolio header {
   background: #E5E4E4;
   padding: 20px 20px 0 20px;
+}
+
+.slideshow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px;
+  margin: 50px 0;
+}
+
+.slideshow img {
+  max-width: 80%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media screen and (min-width: 1024px) {
+  .slideshow img {
+    max-width: 50%;
+    max-height: 500px;
+  }
+}
+
+.slide:hover {
+  opacity: 0.5;
 }
 
 .Slick {
