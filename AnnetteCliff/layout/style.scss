@@ -8,6 +8,14 @@ html {
   }
 }
 
+// ------ colors ----- //
+// $dark: #2A2423;
+$dark: #211E1D;
+$semi-dark: #B2B2B2;
+$semi-light: #E5E4E4;
+$light: #dddddd;
+
+
 // ------ typography ----- //
 h1,
 h2,
@@ -22,11 +30,9 @@ h1,
 h2 {
   font-weight: 800;
   font-size: 15vw;
-  font-family: 'Roboto Mono', 'sans-serif';
 }
 
 p {
-  font-family: 'Roboto Mono', 'sans-serif';
   font-weight: 300;
 }
 
@@ -39,13 +45,6 @@ u {
 .title-sm {
   font-size: 50px;
 }
-
-// ------ colors ----- //
-// $dark: #2A2423;
-$dark: #211E1D;
-$semi-dark: #B2B2B2;
-$semi-light: #E5E4E4;
-$light: #dddddd;
 
 
 // ------ shared ----- //
