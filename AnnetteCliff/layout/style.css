@@ -203,7 +203,7 @@ img {
 }
 
 .section-header p {
-  font-size: 13px;
+  font-size: 18px;
   line-height: 25px;
   text-align: left;
   margin: 10px auto !important;
@@ -224,10 +224,6 @@ img {
   .section-header a {
     max-width: 620px;
     margin: auto;
-  }
-  .section-header p {
-    font-size: 12px;
-    line-height: 24px;
   }
 }
 
@@ -323,7 +319,7 @@ footer {
 #disclosure h3 {
   margin: 0;
   font-style: italic;
-  font-size: 3vw;
+  font-size: 20px;
   margin-bottom: 30px !important;
 }
 
@@ -333,6 +329,10 @@ footer {
   text-align: center;
   margin: 0 auto;
   line-height: 30px;
+}
+
+#disclosure p {
+  font-size: 18px;
 }
 
 @media screen and (min-width: 1024px) {
